@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Real estate application (realestate-app-20260508). This file will be updated as the project structure evolves.
 
-## Repository
+## GitHubリポジトリ
 
-GitHub: https://github.com/ninpaku/realestate-app-20260508.git
+https://github.com/ninpaku/realestate-app-20260508
 
 ## Git Workflow Rules
 
