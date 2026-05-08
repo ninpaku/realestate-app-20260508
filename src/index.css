@@ -202,16 +202,170 @@ body {
 .card-area {
   font-size: 14px;
   color: #666;
+  margin-bottom: 6px;
+}
+
+.card-floor-plan {
+  font-size: 14px;
+  color: #666;
   margin-bottom: 12px;
 }
 
 .card-rent {
   font-size: 14px;
   color: #555;
+  margin-bottom: 16px;
 }
 
 .rent-amount {
   font-size: 20px;
   font-weight: 700;
   color: #4f8ef7;
+}
+
+/* 物件カードの編集・削除ボタン */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 14px;
+}
+
+.btn-edit {
+  flex: 1;
+  padding: 8px;
+  background-color: #f0f4ff;
+  color: #4f8ef7;
+  border: 1px solid #c8d8ff;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: #dce8ff;
+}
+
+.btn-delete {
+  flex: 1;
+  padding: 8px;
+  background-color: #fff0f0;
+  color: #e03030;
+  border: 1px solid #ffc8c8;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #ffe0e0;
+}
+
+/* ヘッダーの右側ボタン群 */
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-add {
+  padding: 9px 18px;
+  background-color: #4f8ef7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #3a7de0;
+}
+
+/* 登録・編集フォームパネル */
+.form-panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  padding: 28px;
+  margin-bottom: 28px;
+  border-left: 4px solid #4f8ef7;
+}
+
+.form-panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* フォームの2カラムレイアウト */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.form-actions .btn-primary {
+  margin-top: 0;
+  flex: 1;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 12px;
+  background-color: #f0f0f0;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 物件なし時のメッセージ */
+.empty-message {
+  text-align: center;
+  color: #888;
+  font-size: 15px;
+  padding: 60px 20px;
+}
+
+/* ローディングを物件一覧内でも使えるよう上書き */
+.property-container .loading {
+  min-height: 200px;
 }
